@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg__addresses
+    description: Geographical location-based information based on address, zipcode, state, and country.
+
+  - name: stg__events
+    description: Events (checkout, package shipped, add to cart, and page view) that are logged based on interactions with users on the greenary website.
+
+  - name: stg__order_items
+    description: Contains infomation on the type and amount of products tied to a particular order.
+
+  - name: stg__orders
+    description: Includes all primary information on an order, including location indentification, all associated costs, shipping information, and times for order delivery.
+
+  - name: stg__products
+    description: Identifies each product, along with the associated price and inventory count.
+
+  - name: stg__promos
+    description: All active and inactive promos and the associated discount. 
+
+  - name: stg__users
+    description: Greenary user information, including name, contact information, and location indentification.
