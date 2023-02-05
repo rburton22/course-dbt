@@ -3,21 +3,56 @@ version: 2
 models:
   - name: stg__addresses
     description: Geographical location-based information based on address, zipcode, state, and country.
+    columns:
+      - name: address_guid
+        tests:
+          - not_null
+          - unique
 
   - name: stg__events
     description: Events (checkout, package shipped, add to cart, and page view) that are logged based on interactions with users on the greenary website.
+    columns:
+      - name: event_guid
+        tests:
+          - not_null
+          - unique
 
   - name: stg__order_items
     description: Contains infomation on the type and amount of products tied to a particular order.
+    columns:
+      - name: order_product_sk
+        tests:
+          - not_null
+          - unique
 
   - name: stg__orders
     description: Includes all primary information on an order, including location indentification, all associated costs, shipping information, and times for order delivery.
+    columns:
+      - name: order_guid
+        tests:
+          - not_null
+          - unique
 
   - name: stg__products
     description: Identifies each product, along with the associated price and inventory count.
+    columns:
+      - name: product_guid
+        tests:
+          - not_null
+          - unique
 
   - name: stg__promos
     description: All active and inactive promos and the associated discount. 
+    columns:
+      - name: promo_type
+        tests:
+          - not_null
+          - unique
 
   - name: stg__users
     description: Greenary user information, including name, contact information, and location indentification.
+    columns:
+      - name: user_guid
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: product_order_facts
+    description: Calculates an order count, product count across all orders, and the average number of each product contained in an order for each product in the greenery database.
+    columns:
+      - name: product_name
+        tests:
+          - not_null
+          - unique

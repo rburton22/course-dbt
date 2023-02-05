@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: Compiles simple product information, and an aggregated inventory revenue potential
+    columns:
+      - name: product_guid
+        tests:
+          - not_null
+          - unique

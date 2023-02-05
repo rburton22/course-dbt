@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_orders_products
+    description: Compiles all information pertaining to order, products, and promotions
+    columns:
+      - name: order_guid
+        tests:
+          - not_null
+
+  - name: int_users_orders
+    description: Compiles all information pertaining to users and orders
+    columns:
+      - name: user_guid
+        tests:
+          - not_null

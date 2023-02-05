@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: user_order_facts
+    description: Calculates an order count, first order date, latest order date, and total user spend for each user in the greenery database.
+    columns:
+      - name: user_guid
+        tests:
+          - not_null
+          - unique
