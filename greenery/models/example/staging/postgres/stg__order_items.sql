@@ -10,7 +10,7 @@ with src_order_items as (
 
 cte_rename as (
     select
-        concat(order_id, product_id) as order_product_sk,
+        {{ generate_surrogate_key(['order_id', 'product_id']) }} as order_product_sk,
         order_id as order_guid,
         product_id as product_guid,
         quantity as item_quantity
